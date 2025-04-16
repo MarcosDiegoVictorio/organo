@@ -52,13 +52,16 @@ const onEmployeeAdded = (employee) => {
   return (
     <div className="App">
       <Banner/>
-      <Form onEmployeeAdd={employee => onEmployeeAdded(employee)}/>
+      <Form teams={teams.map(team => team.name)}onEmployeeAdd={employee => onEmployeeAdded(employee)}/>
 
-      {teams.map(team => <Team 
+      {teams.map(team => 
+      <Team 
         key={team.name} 
         name={team.name} 
         primaryColor={team.primaryColor}
-        secondColor={team.secondColor}/>
+        secondColor={team.secondColor}
+        employees={employees.filter(employee => employee.time === team.name)}
+        />
       )}
     </div>
   );

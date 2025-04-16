@@ -6,15 +6,7 @@ import { useState } from "react";
 
  const Form = (props) => {
 
-    const times = [
-    'Programação',
-    'Front-End',
-    'Data Science',
-    'Devops',
-    'UX e Design',
-    'Mobile',
-    'Inovação e Gestão'
-    ]
+    
 
     const [nome, setNome] = useState('')
     const [cargo, setCargo] = useState('')
@@ -58,7 +50,7 @@ import { useState } from "react";
                 <SuspendedList 
                     obrigatorio={true} 
                     label="Time" 
-                    itens={times}
+                    itens={props.teams}
                     valor={time}
                     onAltered = {valor => setTime(valor)}
                 />
