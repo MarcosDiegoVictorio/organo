@@ -21,6 +21,10 @@ import { useState } from "react";
             image,
             time
         })
+        setNome('')
+        setCargo('')
+        setImage('')
+        setTime('')
     }
 
     return (

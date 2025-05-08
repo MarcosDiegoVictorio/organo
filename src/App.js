@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Banner from './components/Banner';
 import Form from './components/Form';
 import Team from './components/Team';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -46,7 +47,6 @@ const teams = [
 
 const [employees, setEmployees] = useState([])
 const onEmployeeAdded = (employee) => {
-  console.log(employee)
   setEmployees([...employees,employee])
 }
   return (
@@ -63,6 +63,7 @@ const onEmployeeAdded = (employee) => {
         employees={employees.filter(employee => employee.time === team.name)}
         />
       )}
+      <Footer />
     </div>
   );
 }
